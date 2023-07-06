@@ -9,4 +9,4 @@ class Post:
         return self.__dict__ == other.__dict__
 
     def __repr__(self):
-        return f"Post({self.title}, {self.post_content}, comments)"
+        return f"Post({self.title}, {self.post_content}, {self.comments})"
