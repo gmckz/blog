@@ -9,6 +9,7 @@ DROP SEQUENCE IF EXISTS comments_id_seq;
 DROP TABLE IF EXISTS posts;
 DROP SEQUENCE IF EXISTS posts_id_seq;
 
+
 -- Then, we recreate them
 CREATE TABLE posts (
   id SERIAL PRIMARY KEY,
@@ -26,6 +27,7 @@ CREATE TABLE comments (
     references posts(id)
     on delete cascade
 );
+
 
 -- Finally, we add any records that are needed for the tests to run
 INSERT INTO posts (title, post_content) VALUES ('title1', 'contents1');
